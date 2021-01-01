@@ -67,3 +67,35 @@ To run the tests:
 ```bash
 npm test
 ```
+
+
+## Setup Nunjucks via docker-compose
+
+Note: You can always run nunjucks on your system without any docker. Doing as described below is optional!
+
+If you can't or don't want to install the project or any parts globally on your machine, you can use the
+provided docker-compose setup, which allows developing and running the project in an isolated container
+and provides a reproducible environment and allows for preventing unwanted installation and changes on your
+machine, they all take place inside this docker container.
+
+Requirement is to have [docker-compose installed](https://docs.docker.com/compose/install/).
+
+To start the docker container(s) run:
+
+```shell
+$ docker-compose up -d
+Creating network "nunjucks_default" with the default driver
+Creating nunjucks ... done
+```
+
+For developing you can "enter" the container and work on the command line in there as you are used to via:
+
+```shell
+$ docker exec -it nunjucks bash
+root@123abc:/app# 
+```
+
+Now you can e.g. `npm install` or `npm test` on the shell provided via the command above.
+If you want to develop and use your editor as you are used to, you can too, the files are mounted into the
+container under `/app` inside the container. A change you do in this directory (here where you are now)
+it is reflected inside the docker container. Any test watcher, or alikes work just like you expect it.
