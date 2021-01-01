@@ -82,7 +82,7 @@ Requirement is to have [docker-compose installed](https://docs.docker.com/compos
 
 To start the docker container(s) run:
 
-```shell
+```shell-session
 $ docker-compose up -d
 Creating network "nunjucks_default" with the default driver
 Creating nunjucks ... done
@@ -90,7 +90,7 @@ Creating nunjucks ... done
 
 For developing you can "enter" the container and work on the command line in there as you are used to via:
 
-```shell
+```shell-session
 $ docker exec -it nunjucks bash
 root@123abc:/app# 
 ```
