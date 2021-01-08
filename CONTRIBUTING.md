@@ -91,7 +91,7 @@ Creating nunjucks ... done
 For developing you can "enter" the container and work on the command line in there as you are used to via:
 
 ```shell-session
-$ docker exec -it nunjucks bash
+$ docker-compose exec nunjucks bash
 root@123abc:/app# 
 ```
 
